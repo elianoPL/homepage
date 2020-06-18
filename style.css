@@ -1,132 +1,127 @@
-/*resetttt*/ 
+/*resetttt*/
 * {
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    font-family: Sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Sans-serif;
 }
 body {
-    background:#cccccc;
-    max-width: 800px;
-    margin: auto;
+  background: #cccccc;
+  max-width: 800px;
+  margin: auto;
 }
 
 .main-header {
-    background: tomato;
-    padding: 20px;
-    border-radius: 0 0 10px 10px;
+  background: tomato;
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
 }
 .main-header__header {
-    color:white;
-    font-family: serif;
-    font-size:40px;
+  color: white;
+  font-family: serif;
+  font-size: 40px;
 }
 .main-header__sentence {
-    color: #333333;
-    font-family: serif;
-
+  color: #333333;
+  font-family: serif;
 }
 .nav {
-    background-color: rgba(0,0,0,0.3);
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
 }
 .welcome {
-    background-color: seagreen;
-    border:5px black ;
-    border-radius: 10px;
-    padding: 10px;
-    margin-top: 20px;
+  background-color: seagreen;
+  border: 5px black;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 20px;
 }
 .welcome__header {
-    color:green;
-    text-shadow: 0px 0px 5px white;
-    text-align:center;
+  color: green;
+  text-shadow: 0px 0px 5px white;
+  text-align: center;
 }
 .welcome__image {
-    display: inline-block;
-    margin:10px 0 10px;
-    height: 150px;
+  display: inline-block;
+  margin: 10px 0 10px;
+  height: 150px;
 }
 .about {
-    background-color: blue;
-    margin-top: 20px;
-    padding: 30px;
-    border-radius: 10px;
+  background-color: blue;
+  margin-top: 20px;
+  padding: 30px;
+  border-radius: 10px;
 }
 .about__header {
-    text-shadow: 0px 0px 5px white;
-    color:darkblue;
+  text-shadow: 0px 0px 5px white;
+  color: darkblue;
 }
 .about__image {
-    max-width: 200px;
-    float:left;
-    margin: 15px;
-    border-radius: 20px;
+  max-width: 200px;
+  float: left;
+  margin: 15px;
+  border-radius: 20px;
 }
 .projects {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 .projects__header {
-    color: red;
-    writing-mode: vertical-rl;
-    font-size: 50px;
-    float:left;
+  color: red;
+  writing-mode: vertical-rl;
+  font-size: 50px;
+  float: left;
 }
 .single-project {
-    background:orange;
-    max-width: 200px;
-    border-radius:10px;
-    padding: 15px;
-    display: inline-block;
-    margin:auto;
-
+  background: orange;
+  max-width: 200px;
+  border-radius: 10px;
+  padding: 15px;
+  display: inline-block;
+  margin: auto;
 }
 .single-project__name {
-    color:yellow;
+  color: yellow;
 }
 .contact {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 .contact__header {
-    text-transform:uppercase;
-    color:black;
-    font-size: 40px;
-    font-weight:bold;
-    text-shadow:0px 0px 3px #222;
+  text-transform: uppercase;
+  color: black;
+  font-size: 40px;
+  font-weight: bold;
+  text-shadow: 0px 0px 3px #222;
 }
 .footer {
-    margin-top: 20px;
-    color:white;
-    background: #444;
+  margin-top: 20px;
+  color: white;
+  background: #444;
 }
-
 
 /* -------------------- ------------------------------------------------------ */
 .diary {
-    margin-top: 20px
+  margin-top: 20px;
 }
 
-.diary__header{
-    background: white;
-    color:green;
-    border-radius: 5px;
-    padding:10px;
+.diary__header {
+  background: white;
+  color: green;
+  border-radius: 5px;
+  padding: 10px;
 }
 .note {
-    margin-top: 15px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid red;
+  margin-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid red;
 }
 .note:last-child {
-    border:none;
+  border: none;
 }
 .note__header {
-    color: purple;
-
+  color: purple;
 }
 .note__date {
-    float:right;
-    
+  float: right;
 }

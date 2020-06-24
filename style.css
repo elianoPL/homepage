@@ -6,7 +6,14 @@
   font-family: Sans-serif;
 }
 body {
-  background: #cccccc;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    128deg,
+    rgba(188, 255, 218, 1) 0%,
+    rgba(255, 255, 255, 1) 11%,
+    rgba(188, 255, 218, 1) 60%,
+    rgba(255, 255, 255, 1) 70%
+  );
   max-width: 800px;
   margin: auto;
 }
@@ -41,14 +48,15 @@ body {
   text-decoration: none;
   font-weight: bold;
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
-  padding:3px 18px;
+  padding: 3px 18px;
   border-radius: 5px;
 }
-.nav__link:hover, .nav__link:focus {
-  background:white;
-  color:tomato;
+.nav__link:hover,
+.nav__link:focus {
+  background: white;
+  color: tomato;
   text-shadow: none;
-} 
+}
 .welcome {
   background-color: seagreen;
   border: 5px black;
@@ -71,6 +79,7 @@ body {
   margin-top: 20px;
   padding: 30px;
   border-radius: 10px;
+  color: #fff;
 }
 .about__header {
   text-shadow: 0px 0px 5px white;

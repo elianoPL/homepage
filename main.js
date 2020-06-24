@@ -3,12 +3,12 @@ let text = "&copy; Eliano 2020";
 footer.innerHTML = text;
 
 
-let imie = "ela";
+let imie = "majah";
 let wiek = 28;
 
 
+//const uszanowanko = (name, age) => {
 function uszanowanko(name, age) {
-
   if(name.charAt(name.length-1)=="a") {
     name = name.replace(/.$/,"u"); // Babskie imiona będą w odmienione w wołaczu !
     

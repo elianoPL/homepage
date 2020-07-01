@@ -6,7 +6,6 @@
   font-family: Sans-serif;
 }
 body {
-  background: rgb(255, 255, 255);
   background: linear-gradient(
     128deg,
     rgba(188, 255, 218, 1) 0%,
@@ -14,18 +13,24 @@ body {
     rgba(188, 255, 218, 1) 60%,
     rgba(255, 255, 255, 1) 70%
   );
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr;
+  grid-gap: 16px;
+  grid-template-areas: "header nav nav" "main main aside";
+  max-width: 1000px;
+  margin: 0 auto;
+  border: 3px solid black;
 }
-main {
-  max-width: 800px;
-  margin: auto;
+.main {
+  grid-area: main;
 }
 
 .main-header {
-  background: tomato;
+  grid-area: header;
+  background: rgb(255, 99, 71);
   padding: 20px;
   border-radius: 0 0 10px 10px;
-  max-width: 800px;
-  margin: auto;
+  text-align: center;
 }
 .main-header__header {
   color: white;
@@ -37,10 +42,12 @@ main {
   font-family: serif;
 }
 .nav {
-  background-color: rgba(0, 0, 0, 0.3);
+  grid-area: nav;
+  align-self: center;
+  justify-self: end;
+  background-color: rgba(255, 99,71, 0.6);
   border-radius: 5px;
   padding: 10px;
-  margin: 10px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -66,7 +73,6 @@ main {
   border: 5px black;
   border-radius: 10px;
   padding: 10px;
-  margin-top: 20px;
 }
 .welcome__header {
   color: green;
@@ -143,7 +149,7 @@ main {
   visibility: visible;
 }
 .footer::after {
-  content : '© Eliano 2020';
+  content : '© Eliano 2021';
   visibility: visible;
   color: rgb(17, 61, 0);
   text-align: right;

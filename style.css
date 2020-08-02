@@ -9,9 +9,9 @@
 body {
   background: linear-gradient(
     128deg,
-    rgba(188, 255, 218, 1) 0%,
+    rgb(253, 232, 232) 0%,
     rgba(255, 255, 255, 1) 11%,
-    rgba(188, 255, 218, 1) 60%,
+    rgb(221, 221, 221) 60%,
     rgba(255, 255, 255, 1) 70%
   );
   display: grid;
@@ -31,6 +31,7 @@ body {
   border-radius: 0 0 10px 10px;
   text-align: center;
   width: 300px;
+  
 }
 .main-header__header {
   color: white;
@@ -210,6 +211,18 @@ body {
 .clear {
   clear:both;
 }
+@media (max-width: 768px) { 
+  .aside {
+    display: none;
+  }
+  body {
+    grid-template-areas: "header" "nav" "main";
+    grid-template-columns: 1fr;
+  }
+  .main-header {
+    margin:0 auto;
+  }
+ }
 
 /* -------------------- ------------------------------------------------------ */
 .diary {

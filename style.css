@@ -82,6 +82,9 @@ body {
   position: sticky;
   top:50px;
 }
+.author__title {
+  margin-top: 20px;
+}
 .author__photo {
   max-width: 200px;
   border-radius: 100%;
@@ -90,6 +93,16 @@ body {
 }
 .author__note {
   margin-top:20px;
+}
+.social-icons {
+  margin-top:20px;
+}
+.social-icons__list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  font-size: 30px;
+  color: rgb(156, 3, 3);
 }
 .welcome {
   background-image: url("img/people.jpg");

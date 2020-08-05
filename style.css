@@ -277,11 +277,19 @@ body {
   body {
     grid-template-areas: "header" "nav" "main";
     grid-template-columns: 1fr;
-    padding: 16px;
+    padding: 0 16px;
   }
   .main-header,
   .nav {
     margin: 0 auto;
+  }
+  .footer {
+    margin-bottom:30px;
+  }
+}
+@media (max-width: 365px) {
+  .welcome__heading {
+    font-size:30px;
   }
 }
 

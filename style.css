@@ -31,6 +31,7 @@ body {
   border-radius: 0 0 10px 10px;
   text-align: center;
   width: 300px;
+  position: relative;
 }
 .main-header__header {
   color: white;
@@ -74,6 +75,17 @@ body {
   background: white;
   color: tomato;
   text-shadow: none;
+}
+.nav__hamburger {
+  background:transparent;
+  border: none;
+  color: #fff;
+  position: absolute;
+  top: 15px;
+  right:15px;
+  font-size:30px;
+display: none;
+
 }
 .author {
   position: -webkit-sticky;
@@ -275,16 +287,30 @@ body {
     display: none;
   }
   body {
-    grid-template-areas: "header" "nav" "main";
-    grid-template-columns: 1fr;
+    grid-template-areas: "header nav" "main main";
+    grid-template-columns: 1fr 1fr;
     padding: 0 16px;
   }
   .main-header,
   .nav {
     margin: 0 auto;
   }
+  .nav {width: 100%;}
   .footer {
     margin-bottom:30px;
+  }
+}
+@media (max-width: 649px) {
+  body {
+    grid-template-areas: "header" "nav" "main";
+    grid-template-columns: 1fr;
+  }
+  .nav__hamburger {
+    display: block;
+  }
+  .nav--close {
+    height: 0;
+    overflow: hidden;
   }
 }
 @media (max-width: 365px) {

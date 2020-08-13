@@ -48,7 +48,6 @@ body {
   justify-self: end;
   background-color: rgba(255, 99, 71, 0.6);
   border-radius: 5px;
-
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -250,6 +249,7 @@ display: none;
 .contact,
 .contact__description {
   margin-top: 20px;
+  display: block;
 }
 .contact__header {
   text-transform: uppercase;
@@ -257,6 +257,13 @@ display: none;
   font-size: 30px;
   font-weight: bold;
   text-shadow: 0px 0px 3px #222;
+}
+.contact__pic {
+  margin: 0 20px ;
+  width: 300px;
+  float: left;
+  border: 1px solid gray;
+  border-radius: 6px;
 }
 /*kurwa, no nie mam lepszego pomysłu na tą stopke xd. Ta działa !*/
 .footer {
@@ -313,6 +320,10 @@ display: none;
     grid-template-areas: "header" "nav" "main";
     grid-template-columns: 1fr;
   }
+  .main-header {
+    width: 100%;
+  }
+  
   .nav__hamburger {
     display: block;
   }
@@ -320,10 +331,23 @@ display: none;
     height: 0;
     overflow: hidden;
   }
+  .nav {
+    display: block;
+  }
+  .nav__link, .nav__link:first-child, .nav__link:last-child {
+    margin: 16px auto;
+    padding: 8px;
+    width: 250px;
+    text-align: center;
+  }
 }
-@media (max-width: 365px) {
+@media (max-width: 430px) {
   .welcome__heading {
     font-size:30px;
+  }
+  .about__image {
+    margin-left:0;
+    max-width: 150px;
   }
 }
 

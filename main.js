@@ -26,7 +26,7 @@ osoba.powitanie(osoba.name, osoba.age)
 
 let button = document.querySelector('.nav__hamburger--js');
 let nav = document.querySelector('.nav--js');
-
+ 
 nav.classList.add('nav--close');
 let opened = false;
 

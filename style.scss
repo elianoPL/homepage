@@ -1,39 +1,47 @@
-@charset "UTF-8";
 /*resetttt*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Sans-serif; }
-
+  font-family: Sans-serif;
+}
 body {
-  background: linear-gradient(128deg, #fde8e8 0%, white 11%, #dddddd 60%, white 70%);
+  background: linear-gradient(
+    128deg,
+    rgb(253, 232, 232) 0%,
+    rgba(255, 255, 255, 1) 11%,
+    rgb(221, 221, 221) 60%,
+    rgba(255, 255, 255, 1) 70%
+  );
   display: grid;
   grid-template-columns: 3fr 3fr 3fr;
   grid-gap: 16px;
   grid-template-areas: "header nav nav" "main main aside";
   max-width: 1000px;
-  margin: 0 auto; }
-
+  margin: 0 auto;
+}
 .main {
-  grid-area: main; }
-
+  grid-area: main;
+}
 .main-header {
   grid-area: header;
-  background: tomato;
+  background: rgb(255, 99, 71);
   padding: 20px;
   border-radius: 0 0 10px 10px;
   text-align: center;
   width: 300px;
-  position: relative; }
-  .main-header__header {
+  position: relative;
+  &__header {
     color: white;
     font-family: serif;
     font-size: 40px;
-    margin: 16px auto 16px; }
-  .main-header__sentence {
+    margin: 16px auto 16px;
+  }
+  &__sentence {
     color: #333333;
-    font-family: serif; }
+    font-family: serif;
+  }
+}
 
 .nav {
   grid-area: nav;
@@ -43,26 +51,31 @@ body {
   border-radius: 5px;
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap; }
-  .nav__link {
+  flex-wrap: wrap;
+  &__link {
     display: block;
     color: #eee;
     text-transform: uppercase;
     text-decoration: none;
     font-weight: bold;
-    text-shadow: 0px 0px 5px black;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
     padding: 3px 18px;
     border-radius: 5px;
-    margin: 10px 0; }
-    .nav__link:first-child {
-      margin-left: 10px; }
-    .nav__link:last-child {
-      margin-right: 10px; }
-    .nav__link:focus, .nav__link:hover {
+    margin: 10px 0;
+    &:first-child {
+      margin-left: 10px;
+    }
+    &:last-child {
+      margin-right: 10px;
+    }
+    &:focus,
+    &:hover {
       background: white;
       color: tomato;
-      text-shadow: none; }
-  .nav__hamburger {
+      text-shadow: none;
+    }
+  }
+  &__hamburger {
     background: transparent;
     border: none;
     color: #fff;
@@ -70,39 +83,52 @@ body {
     top: 15px;
     right: 15px;
     font-size: 30px;
-    display: none; }
+    display: none;
+  }
+}
 
 .author {
   position: -webkit-sticky;
   position: sticky;
-  top: 50px; }
-  .author__title {
-    margin-top: 20px; }
-  .author__photo {
+  top: 50px;
+  &__title {
+    margin-top: 20px;
+  }
+  &__photo {
     max-width: 200px;
     border-radius: 100%;
     display: block;
-    margin: 0 auto; }
-  .author__note {
-    margin-top: 20px; }
+    margin: 0 auto;
+  }
+  &__note {
+    margin-top: 20px;
+  }
+}
 
 .social-icons {
   margin-top: 20px;
-  font-size: 35px; }
-  .social-icons__list {
+  font-size: 35px;
+  &__list {
     list-style-type: none;
     display: flex;
-    justify-content: space-around; }
-  .social-icons__link {
-    color: #12d389; }
-  .social-icons__info, .social-icons__method {
-    display: none; }
-  .social-icons__link:hover, .social-icons__link:focus {
-    color: #0fa86e; }
-  .social-icons__item {
-    position: relative; }
-  .social-icons__link:hover .social-icons__info,
-  .social-icons__link:focus .social-icons__info {
+    justify-content: space-around;
+  }
+  &__link {
+    color: rgb(18, 211, 137);
+  }
+  &__info,
+  &__method {
+    display: none;
+  }
+  &__link:hover,
+  &__link:focus {
+    color: rgb(15, 168, 110);
+  }
+  &__item {
+    position: relative;
+  }
+  &__link:hover &__info,
+  &__link:focus &__info {
     position: absolute;
     top: -40px;
     left: -0%;
@@ -111,9 +137,10 @@ body {
     color: #fff;
     border-radius: 3px;
     padding: 6px;
-    font-size: 15px; }
-  .social-icons__link:hover .social-icons__info::before,
-  .social-icons__link:focus .social-icons__info::before {
+    font-size: 15px;
+  }
+  &__link:hover &__info::before,
+  &__link:focus &__info::before {
     content: "";
     position: absolute;
     top: 100%;
@@ -121,7 +148,9 @@ body {
     height: 0;
     border-style: solid;
     border-width: 6px 6px 0 6px;
-    border-color: #333 transparent transparent transparent; }
+    border-color: #333 transparent transparent transparent;
+  }
+}
 
 .welcome {
   background-image: url("img/people.jpg");
@@ -132,11 +161,19 @@ body {
   padding: 30px;
   border: 0px solid black;
   border-radius: 16px;
-  text-align: center; }
-  .welcome__heading {
+  text-align: center;
+  &__heading {
     font-size: 40px;
-    color: #009945;
-    text-shadow: black 4px 0px 0px, black 0.5403px 0.84147px 0px, black -0.41615px 0.9093px 0px, black -0.98999px 0.14112px 0px, black -0.65364px -0.7568px 0px, black 0.28366px -0.95892px 0px, black 0.96017px -0.27942px 0px; }
+    color: rgb(0, 153, 69);
+    text-shadow: rgb(0, 0, 0) 4px 0px 0px,
+      rgb(0, 0, 0) 0.540302px 0.841471px 0px,
+      rgb(0, 0, 0) -0.416147px 0.909297px 0px,
+      rgb(0, 0, 0) -0.989992px 0.14112px 0px,
+      rgb(0, 0, 0) -0.653644px -0.756802px 0px,
+      rgb(0, 0, 0) 0.283662px -0.958924px 0px,
+      rgb(0, 0, 0) 0.96017px -0.279415px 0px;
+  }
+}
 
 .welcome__sign {
   margin-top: 45px;
@@ -144,15 +181,20 @@ body {
   text-transform: uppercase;
   letter-spacing: 4px;
   font-weight: bold;
-  color: #009945;
+  color: rgb(0, 153, 69);
   color: lime;
-  text-shadow: black 3px 0px 0px, black 0.5403px 0.84147px 0px, black -0.41615px 0.9093px 0px, black -0.98999px 0.14112px 0px, black -0.65364px -0.7568px 0px, black 0.28366px -0.95892px 0px, black 0.96017px -0.27942px 0px; }
-
+  text-shadow: rgb(0, 0, 0) 3px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px,
+    rgb(0, 0, 0) -0.416147px 0.909297px 0px,
+    rgb(0, 0, 0) -0.989992px 0.14112px 0px,
+    rgb(0, 0, 0) -0.653644px -0.756802px 0px,
+    rgb(0, 0, 0) 0.283662px -0.958924px 0px,
+    rgb(0, 0, 0) 0.96017px -0.279415px 0px;
+}
 .welcome__image {
   display: inline-block;
   margin: 10px 0 10px;
-  height: 150px; }
-
+  height: 150px;
+}
 .about {
   background-color: transparent;
   border-top: 1px solid;
@@ -161,36 +203,36 @@ body {
   padding: 30px;
   border-radius: 10px;
   color: #333;
-  text-align: justify; }
-
+  text-align: justify;
+}
 .about__header {
   text-shadow: 0px 0px 5px #ddd;
-  color: #000; }
-
+  color: #000;
+}
 .about__image {
   max-width: 200px;
   float: left;
   margin: 15px;
-  border-radius: 20px; }
-
+  border-radius: 20px;
+}
 .projects {
   margin-top: 20px;
-  padding: 20px 20px 0 0; }
-
+  padding: 20px 20px 0 0;
+}
 .projects__header {
   color: red;
   writing-mode: vertical-lr;
   text-orientation: upright;
   font-size: 50px;
-  float: left; }
-
+  float: left;
+}
 .projects__list {
   list-style-type: none;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  width: calc(100% - 60px); }
-
+  width: calc(100% - 60px);
+}
 .single-project {
   background: transparent;
   border-radius: 10px;
@@ -198,41 +240,41 @@ body {
   border-left: 1px solid black;
   padding: 15px;
   width: 250px;
-  margin-bottom: 30px; }
-
+  margin-bottom: 30px;
+}
 .single-project__name {
-  color: #222; }
-
+  color: #222;
+}
 .single-project__description {
   margin-top: 10px;
-  text-align: justify; }
-
+  text-align: justify;
+}
 .contact,
 .contact__description {
   margin-top: 20px;
-  display: block; }
-
+  display: block;
+}
 .contact__header {
   text-transform: uppercase;
   color: black;
   font-size: 30px;
   font-weight: bold;
-  text-shadow: 0px 0px 3px #222; }
-
+  text-shadow: 0px 0px 3px #222;
+}
 .contact__pic {
   margin: 0 20px 10px;
   width: 300px;
   float: left;
   border: 1px solid gray;
-  border-radius: 6px; }
-
+  border-radius: 6px;
+}
 /*kurwa, no nie mam lepszego pomysłu na tą stopke xd. Ta działa !*/
 .footer {
-  visibility: hidden; }
-
+  visibility: hidden;
+}
 .html--footer {
-  position: relative; }
-
+  position: relative;
+}
 .html--footer::before {
   content: "";
   width: 0;
@@ -244,48 +286,59 @@ body {
   bottom: 0;
   right: 0px;
   visibility: visible;
-  justify-content: flex-end; }
-
+  justify-content: flex-end;
+}
 .html--footer::after {
   content: "© Eliano 2021";
   visibility: visible;
-  color: #113d00;
+  color: rgb(17, 61, 0);
   text-align: right;
   position: absolute;
   right: 20px;
-  bottom: 10px; }
-
+  bottom: 10px;
+}
 .clear {
-  clear: both; }
-
+  clear: both;
+}
 @media (max-width: 768px) {
   .aside {
-    display: none; }
+    display: none;
+  }
   body {
     grid-template-areas: "header nav" "main main";
     grid-template-columns: 1fr 1fr;
-    padding: 0 16px; }
+    padding: 0 16px;
+  }
   .main-header,
   .nav {
-    margin: 0 auto; }
+    margin: 0 auto;
+  }
   .nav {
-    width: 100%; }
+    width: 100%;
+  }
   .footer {
-    margin-bottom: 30px; } }
-
+    margin-bottom: 30px;
+  }
+}
 @media (max-width: 649px) {
   body {
     grid-template-areas: "header" "nav" "main";
-    grid-template-columns: 1fr; }
+    grid-template-columns: 1fr;
+  }
   .main-header {
-    width: 100%; }
+    width: 100%;
+  }
+
   .nav__hamburger {
-    display: block; }
+    display: block;
+  }
   .nav--close {
     height: 0;
-    overflow: hidden; }
+    overflow: hidden;
+  }
   .nav {
-    display: block; }
+    display: block;
+  }
   .nav__link,
   .nav__link:first-child,
   .nav__link:last-child {
@@ -293,35 +346,41 @@ body {
     padding: 8px;
     width: 250px;
     text-align: center;
-    font-size: 22px; } }
-
+    font-size: 22px;
+  }
+}
 @media (max-width: 430px) {
   .welcome__heading {
-    font-size: 30px; }
+    font-size: 30px;
+  }
   .about__image {
     margin-left: 0;
-    max-width: 150px; } }
+    max-width: 150px;
+  }
+}
 
 /* -------------------- ------------------------------------------------------ */
 .diary {
-  margin-top: 20px; }
+  margin-top: 20px;
+}
 
 .diary__header {
   background: white;
   color: green;
   border-radius: 5px;
-  padding: 10px; }
-
+  padding: 10px;
+}
 .note {
   margin-top: 15px;
   padding-bottom: 15px;
-  border-bottom: 1px solid red; }
-
+  border-bottom: 1px solid red;
+}
 .note:last-child {
-  border: none; }
-
+  border: none;
+}
 .note__header {
-  color: purple; }
-
+  color: purple;
+}
 .note__date {
-  float: right; }
+  float: right;
+}
